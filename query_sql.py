@@ -55,7 +55,6 @@ def get_data(query,key1,temp):
         conn = connect()
         cursor = conn.cursor()
         cursor.execute(query)
-        #for row in iter_row(cursor, 10):
         rows = cursor.fetchall()
         for row in rows:
             logging.info(row)
